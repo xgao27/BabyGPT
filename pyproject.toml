@@ -1,7 +1,7 @@
 [project]
-name = "nanochat"
+name = "BabyGPT"
 version = "0.1.0"
-description = "the minimal full-stack ChatGPT clone"
+description = "Baby-sized gpt for learning and experimentation, one baby step at a time."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -10,6 +10,7 @@ dependencies = [
     "ipykernel>=7.1.0",
     "kernels>=0.11.7",
     "matplotlib>=3.10.8",
+    "peft>=0.19.1",
     "psutil>=7.1.0",
     "python-dotenv>=1.2.1",
     "regex>=2025.9.1",
