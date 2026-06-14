@@ -1,0 +1,24 @@
+0. Decide objective: continued LM vs SFT-style instruction tuning
+1. Load GPT-2 + tokenizer; handle EOS/PAD deliberately
+2. Download and inspect TinyStories
+3. Tokenize, concatenate with EOS, save token shards
+4. Write token-stream dataloader
+5. Implement single-GPU full fine-tuning training loop
+6. Add validation loss, perplexity, sample generation
+7. Add checkpoint save/resume
+8. Add W&B logging
+9. Add mixed precision + gradient accumulation
+10. Implement LoRA manually
+11. Compare full fine-tuning vs LoRA
+12. Add DDP multi-GPU
+13. Optional: package/push model/adapters to Hugging Face Hub
+
+-1. Make BabyGPT load correctly from your checkpoint
+-2. Verify tokenizer compatibility
+-3. Build TinyStories token shards
+-4. Build dataloader returning x, y
+-5. Write manual causal LM loss
+-6. Train full model first
+-7. Add eval/generation/checkpointing/W&B
+8. Add LoRA manually to BabyGPT modules
+9. Add DDP/multi-GPU last

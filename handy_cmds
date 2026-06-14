@@ -1,0 +1,20 @@
+# Request a CPU node only
+salloc -t 2:00:00 -N 1 -q inferno -A gts-jxu81
+# Request H200, 140GB VRAM
+salloc -t 1:00:00 -N 1 --gres=gpu:H200:1 -q inferno -A gts-jxu81 --mem-per-gpu=140G
+# request RTXPro Blackwell, 96GB VRAM
+salloc -t 0:10:00 -N 1 --gres=gpu:rtx_pro_6000_blackwell:1 -A gts-jxu81 --mem-per-gpu=96G
+# requset RTX 6000, 48GB VRAM
+salloc -t 0:10:00 -N 1 --gres=gpu:rtx_6000:1 -A gts-jxu81 --mem-per-gpu=80G
+
+pace-quota
+
+export HOME=/storage/home/hcoda1/7/jxu81/d-techai-0/jxu81
+
+CUDA fix: have to use CUDA 12.9.1: uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu129
+
+# check job status
+scontrol show job 6648001
+squeue -u jxu81
+# show all GPUs nodes
+sinfo -N -h -o "%N %G" | grep gpu
