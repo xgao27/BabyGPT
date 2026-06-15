@@ -1,6 +1,6 @@
 # BabyGPT
 
-A learning project building a GPT-2 style language model from scratch in PyTorch. Each notebook adds one concept on top of the previous, going from a bare transformer to a trained, fine-tuned model that uploads to HuggingFace Hub.
+A learning project building a GPT-2 style language model from scratch in PyTorch. Each notebook adds one concept on top of the previous, going from a bare transformer to a trained, fine-tuned model that uploads to HuggingFace Hub. All the progressive steps are then combined into standalone training scripts for pretraining and finetuning. The pretraining stage follows the [NanoGPT tutorial](https://github.com/karpathy/build-nanogpt) by Andrej Karpathy.
 
 ## Structure
 
